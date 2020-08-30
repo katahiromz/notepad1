@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.4)
+project(notepad C CXX RC)
+add_definitions(-DUNICODE -D_UNICODE)
+add_executable(notepad WIN32 notepad.cpp notepad_res.rc)
+target_link_libraries(notepad PRIVATE comctl32 comdlg32)
